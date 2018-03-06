@@ -1,0 +1,22 @@
+<%= form_tag("/resolve", method: "get" ) do %>
+  <% if url.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(url.errors.count, "error") %> prohibited this url from being saved:</h2>
+
+      <ul>
+      <% url.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= label_tag(:short_url, "Resolve") %>
+    <%= text_area_tag(:short_url) %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag("Resolve URL") %>
+  </div>
+<% end %>

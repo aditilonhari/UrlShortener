@@ -1,0 +1,13 @@
+
+<h2>New shortened url is here! You can use it now!  </h2>
+<p>
+  <strong>Original url:</strong>
+  <%= @url.original_url %>
+</p>
+
+<p>
+  <strong>Short url:</strong>
+  <%= "http://localhost:3000/shortened/" + @url.short_url %>
+</p>
+
+<p id="notice"><%= notice %></p>
